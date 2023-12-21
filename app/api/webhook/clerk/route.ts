@@ -50,8 +50,9 @@ export async function POST(req: Request) {
     });
   }
 
+  console.log('evt.data:', evt.data);
+
   // Get the ID and type
-  const { id } = evt.data;
   const eventType = evt.type;
 
   if (eventType === 'user.created') {
@@ -65,10 +66,6 @@ export async function POST(req: Request) {
       lastName: last_name,
       photo: image_url,
     };
-
-    console.error('evt.data:', evt.data);
-    console.error('user:', user);
-    
 
     let newUser: any;
     try {
