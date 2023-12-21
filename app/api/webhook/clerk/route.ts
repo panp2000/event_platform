@@ -66,8 +66,8 @@ export async function POST(req: Request) {
       photo: image_url,
     };
 
-    console.log('evt.data:', evt.data);
-    console.log('user:', user);
+    console.error('evt.data:', evt.data);
+    console.error('user:', user);
     
 
     let newUser: any;
